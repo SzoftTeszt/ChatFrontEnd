@@ -1,0 +1,11 @@
+app-messages{
+    height: 79.99999%;
+    display:block;
+    /* background: aqua !important; */
+    overflow-y: scroll;
+}
+app-send{
+    /* background: orange; */
+    height: 19.99999%;
+    display:block;
+}

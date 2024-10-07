@@ -1,0 +1,11 @@
+p{
+    margin:0;
+}
+.hatter{
+    width:95%;
+    margin:10px auto 0 auto;
+}
+button{
+    margin: 5px auto 0 auto;
+    display: block;
+}

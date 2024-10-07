@@ -1,0 +1,11 @@
+<div class="hatter">
+    <ng-container *ngFor="let message of messages">
+    <div    class="message" 
+            [ngClass]="message.userName=='JAttila'?'my':''" >
+        <div class="username">{{message.userName}}</div>
+        <div class="uzi">{{message.uzi}}</div>
+    </div>
+</ng-container>
+   <!-- {{messages|json}} -->
+</div>  
+

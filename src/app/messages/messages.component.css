@@ -1,0 +1,30 @@
+.hatter{
+    width:95%;
+    margin:0 auto;
+}
+.message{
+    margin:5px 0;
+    background-color: whitesmoke;
+    width: 80%;
+    border-radius: 10px;
+    padding: 0 2px;
+    float:left;
+}
+.my{
+    background-color: rgb(126, 204, 126);
+    float:right;
+   
+}
+.username{
+    font-size: smaller;
+    background-color: #ddd;
+    color:white;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0px 5px;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+p{
+    margin:0;
+}
