@@ -13,5 +13,6 @@ export class SendComponent {
 
   pushMessage(){
     this.base.pushMessage(this.message)
+    this.message=""
   }
 }

@@ -1,11 +1,25 @@
 <div class="hatter">
-    <ng-container *ngFor="let message of messages">
-    <div    class="message" 
-            [ngClass]="message.userName=='JAttila'?'my':''" >
-        <div class="username">{{message.userName}}</div>
-        <div class="uzi">{{message.uzi}}</div>
-    </div>
-</ng-container>
+    <!-- {{messages|json}} -->
+
+    <ng-container *ngFor="let message of messages" #scrollframe>
+        <div    class="message" 
+                [ngClass]="message.username=='JAttila'?'my':''" >
+            <div class="username">{{message.username}}</div>
+
+            <ng-container *ngIf="message.username=='JAttila'; else nemen">
+                <textarea (click)="klikTextArea()" [(ngModel)]="message.uzi" class="form-control" ></textarea>
+            </ng-container>
+            <ng-template #nemen>
+                <div class="uzi">{{message.uzi}}</div>
+            </ng-template>
+
+            <ng-container *ngIf="message.username=='JAttila'">
+                <button (click)="deleteMessage(message)" type="button" class="btn btn-secondary btn-sm">Törlés</button>
+                <button (click)="updateMessage(message)" type="button" class="btn btn-secondary btn-sm">Frissítés</button>
+            </ng-container>
+        </div>
+    </ng-container>
    <!-- {{messages|json}} -->
+
 </div>  
 

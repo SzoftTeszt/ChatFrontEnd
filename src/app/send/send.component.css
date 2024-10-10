@@ -9,3 +9,9 @@ button{
     margin: 5px auto 0 auto;
     display: block;
 }
+
+textarea{
+    max-width:300px;
+    display:block;
+    margin: 0 auto;
+}
