@@ -25,8 +25,8 @@ export class BaseService {
 
   }
 
-  pushMessage(message:string){
-    var body={username:"JAttila", uzi:message}
+  pushMessage(userName:string, message:string){
+    var body={username:userName, uzi:message}
     this.http.post(this.firebaseUrl+".json", body).forEach(
       (res)=>console.log("Sikeres üzenetüldés: ", res)
     )
