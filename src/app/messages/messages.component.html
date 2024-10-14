@@ -1,6 +1,6 @@
 <div class="hatter">
     <!-- {{messages|json}} -->
-
+    <button (click)="le()">Le</button>
     <ng-container *ngFor="let message of messages" #scrollframe>
         <div    class="message" 
                 [ngClass]="message.username=='JAttila'?'my':''" >
@@ -22,4 +22,4 @@
    <!-- {{messages|json}} -->
 
 </div>  
-
+<div id="vege"></div>

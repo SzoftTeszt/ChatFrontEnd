@@ -13,8 +13,9 @@ export class BaseService {
 
   constructor(private http:HttpClient) { 
     // this.loadMessages();
-    this.http.get(this.firebaseUrl+".json").forEach(
-      (res)=>{this.messages.next(res)})
+    setInterval(
+    ()=>this.http.get(this.firebaseUrl+".json").forEach(
+      (res)=>{this.messages.next(res)}), 1000)
 
     // setInterval(()=>{
     //   this.http.get(this.firebaseUrl+".json").forEach(

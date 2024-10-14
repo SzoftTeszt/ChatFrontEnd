@@ -2,6 +2,11 @@
     width:95%;
     margin:0 auto;
 }
+.hatter::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 .message{
     margin:5px 0;
     background-color: whitesmoke;
