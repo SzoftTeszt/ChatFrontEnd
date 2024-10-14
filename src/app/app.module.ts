@@ -9,13 +9,19 @@ import { ContentComponent } from './content/content.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
+import { NavComponent } from './nav/nav.component';
+import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MessagesComponent,
     SendComponent,
-    ContentComponent
+    ContentComponent,
+    NavComponent,
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

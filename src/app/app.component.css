@@ -1,5 +1,15 @@
-app-content{
+::ng-deep .wrapper{
     display: block;
-    height: 100vh;
+    height: 80vh;
     background-color: #ddd;
+    overflow-y: none;
+}
+app-nav{
+    height: 10vh;
+    display: block;
+    background-color: blanchedalmond;
+}
+app-footer{
+    height: 10vh;
+    display: block;
 }

@@ -10,50 +10,46 @@ import { Router } from '@angular/router';
 })
 export class MessagesComponent {
   messages:any
+  reflesh=true
 
   
   constructor(private base:BaseService)
     {
       afterRender(
-        ()=>document.getElementById("vege")?.scrollIntoView(
+        ()=> {if (this.reflesh) document.getElementById("vege")?.scrollIntoView(
           {behavior:"smooth",
           block:"start",
           inline:"nearest"}
-        )
+        )}
       )
 
 
       this.base.getMessages().subscribe(
         (res:any)=>{
-          this.messages=[]
-          for (const key in res) {
-            let seged:any=res[key]
-            seged.key=key
-            this.messages.push(seged)            
+          if (this.reflesh){
+            console.log("afterView:",this.reflesh)
+            this.messages=[]
+            for (const key in res) {
+              let seged:any=res[key]
+              seged.key=key
+              this.messages.push(seged)            
+            }
           }
         }
       )
   }
-  le(){
-    // this.router.navigate([],{fragment:"#vege"})
-    let vmi=document.getElementById("vege")
-    console.log("vmi", vmi)
-    // window.scrollTo(0, (window.document.body.scrollHeight - window.innerHeight));
-    vmi?.scrollIntoView({
-      behavior:"smooth",
-      block:"start",
-      inline:"nearest"
-    })
-    // this.scroller.scrollToAnchor("#vege")
-  }
+  
 
   deleteMessage(message:any){
     this.base.deleteMessage(message)
+    this.reflesh=true;
   }
   updateMessage(message:any){
     this.base.updateMessage(message)
+    this.reflesh=true;
   }
   klikTextArea(){
-    console.log("Klikk")
+    this.reflesh=false;
+    console.log("KlikTextArea",this.reflesh)
   }
 }

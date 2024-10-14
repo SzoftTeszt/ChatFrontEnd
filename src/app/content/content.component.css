@@ -2,7 +2,7 @@ app-messages{
     height: 79.99999%;
     display:block;
     /* background: aqua !important; */
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 app-send{
     /* background: orange; */

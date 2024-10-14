@@ -15,7 +15,7 @@ export class BaseService {
     // this.loadMessages();
     setInterval(
     ()=>this.http.get(this.firebaseUrl+".json").forEach(
-      (res)=>{this.messages.next(res)}), 1000)
+      (res)=>{this.messages.next(res)}), 2000)
 
     // setInterval(()=>{
     //   this.http.get(this.firebaseUrl+".json").forEach(
